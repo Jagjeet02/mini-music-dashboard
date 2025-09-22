@@ -1,3 +1,88 @@
-body{
-    background-color: black;
+// main.scss
+@use './variable' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/splash_bg.png");
+
+    .login-form {
+        border-radius: 15px;
+        padding: 25px;
+        max-width: 352px;
+        width: 100%;
+        margin: 25px;
+        position: relative;
+        z-index: 1;
+        color: $white;
+
+        ::before {
+            position: absolute;
+            content: " ";
+            background-color: white;
+            inset: 0;
+            z-index: -1;
+            border-radius: 15px;
+            opacity: 0.041;
+
+        }
+
+        .login-head {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-inputs {
+            display: flex;
+            flex-direction: column;
+
+            .username,
+            .password {
+                position: relative;
+                margin-bottom: 15px;
+
+                input {
+                    padding: 15px 10px;
+                    border: none;
+                    width: 100%;
+                    background-color: $white;
+                    border-radius: 15px;
+                    color: $black;
+                    &:focus-visible{
+                        outline: none;
+                         box-shadow: 0 4px 10px rgba(0, 77, 87, 0.3), 0 0 0 3px rgba(26, 188, 156, 0.2);
+                    }
+                }
+
+                label {
+                    position: absolute;
+                    top: 11px;
+                    left: 10px;
+                    color: $grey;
+                    transition: 0.35s all;
+                }
+
+                &.focused {
+                    label {
+                        top: 0;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+        }
+
+        .login-btn {
+            width: 100%;
+        }
+    }
 }

@@ -1,3 +1,124 @@
-body {
-  background-color: black;
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.primary-btn {
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #1ABC9C;
+  border: none;
+  border-radius: 22px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  font-size: 18px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #1ABC9C;
+  border-radius: 22px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/splash_bg.png");
+}
+.login-container .login-form {
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 352px;
+  width: 100%;
+  margin: 25px;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+.login-container .login-form ::before {
+  position: absolute;
+  content: " ";
+  background-color: white;
+  inset: 0;
+  z-index: -1;
+  border-radius: 15px;
+  opacity: 0.041;
+}
+.login-container .login-form .login-head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-container .login-form .form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+.login-container .login-form .form-inputs .username,
+.login-container .login-form .form-inputs .password {
+  position: relative;
+  margin-bottom: 15px;
+}
+.login-container .login-form .form-inputs .username input,
+.login-container .login-form .form-inputs .password input {
+  padding: 15px 10px;
+  border: none;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  color: #000000;
+}
+.login-container .login-form .form-inputs .username input:focus-visible,
+.login-container .login-form .form-inputs .password input:focus-visible {
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 77, 87, 0.3), 0 0 0 3px rgba(26, 188, 156, 0.2);
+}
+.login-container .login-form .form-inputs .username label,
+.login-container .login-form .form-inputs .password label {
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  color: #666666;
+  transition: 0.35s all;
+}
+.login-container .login-form .form-inputs .username.focused label,
+.login-container .login-form .form-inputs .password.focused label {
+  top: 0;
+  font-size: 12px;
+}
+.login-container .login-form .login-btn {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
