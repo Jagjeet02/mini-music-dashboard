@@ -31,8 +31,8 @@ p {
   color: #ffffff;
   background-color: #1ABC9C;
   border: none;
-  border-radius: 22px;
-  padding: 8px 20px;
+  border-radius: 15px;
+  padding: 15px 20px;
   cursor: pointer;
 }
 
@@ -41,9 +41,38 @@ p {
   color: #000000;
   background-color: #ffffff;
   border: 1px solid #1ABC9C;
-  border-radius: 22px;
-  padding: 8px 20px;
+  border-radius: 15px;
+  padding: 15px 20px;
   cursor: pointer;
+}
+
+.header-main {
+  background-color: #004D57;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-main img {
+  max-width: 200px;
+}
+
+aside {
+  width: 20%;
+  padding-block: 20px;
+  border-right: 1px solid #666666;
+}
+aside nav .li {
+  display: block;
+  padding: 15px 20px;
+}
+aside nav .li.primary-btn {
+  border-radius: 0;
+}
+aside nav .li.passive {
+  color: #666666;
+}
+aside nav .li.passive:hover {
+  border: 1px solid #1ABC9C;
 }
 
 * {
@@ -59,6 +88,8 @@ p {
   justify-content: center;
   align-items: center;
   background: url("/splash_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .login-container .login-form {
   border-radius: 15px;
@@ -86,36 +117,32 @@ p {
 .login-container .login-form .form-inputs {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
-.login-container .login-form .form-inputs .username,
-.login-container .login-form .form-inputs .password {
+.login-container .login-form .form-inputs .input-field {
   position: relative;
   margin-bottom: 15px;
 }
-.login-container .login-form .form-inputs .username input,
-.login-container .login-form .form-inputs .password input {
+.login-container .login-form .form-inputs .input-field input {
   padding: 15px 10px;
   border: none;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   border-radius: 15px;
   color: #000000;
 }
-.login-container .login-form .form-inputs .username input:focus-visible,
-.login-container .login-form .form-inputs .password input:focus-visible {
+.login-container .login-form .form-inputs .input-field input:focus-visible {
   outline: none;
   box-shadow: 0 4px 10px rgba(0, 77, 87, 0.3), 0 0 0 3px rgba(26, 188, 156, 0.2);
 }
-.login-container .login-form .form-inputs .username label,
-.login-container .login-form .form-inputs .password label {
+.login-container .login-form .form-inputs .input-field label {
   position: absolute;
   top: 11px;
   left: 10px;
   color: #666666;
   transition: 0.35s all;
 }
-.login-container .login-form .form-inputs .username.focused label,
-.login-container .login-form .form-inputs .password.focused label {
+.login-container .login-form .form-inputs .input-field.focused label {
   top: 0;
   font-size: 12px;
 }

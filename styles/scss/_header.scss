@@ -1,0 +1,10 @@
+@use './variable' as *;
+.header-main{
+    background-color: $dark-green;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+        img{
+            max-width: 200px;
+        }
+    }

@@ -14,10 +14,11 @@ export default function Login() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (username === "admin" && password === "admin") {
+    if (username === "Jagjeet" && password === "j@gjeet00") {
       localStorage.setItem("loggedIn", "true");
       router.push("/dashboard");
-    } else {
+    } 
+    else {
       alert("Invalid credentials");
     }
   };
@@ -27,7 +28,7 @@ export default function Login() {
       <form onSubmit={handleLogin} className="login-form">
         <h2 className="login-head">Login</h2>
         <div className="form-inputs">
-          <div className={`username ${username || usernameFocused ? "focused" : ""}`}>
+          <div className={`input-field ${username || usernameFocused ? "focused" : ""}`}>
             <label htmlFor="user">Username</label>
             <input type="text"id="user" value={username} 
               onChange={(e) => setUsername(e.target.value)}
@@ -35,7 +36,7 @@ export default function Login() {
               onBlur={() => setUsernameFocused(false)}
               required/>
           </div>
-          <div className={`password ${password || passwordFocused ? "focused" : ""}`}>
+          <div className={`input-field ${password || passwordFocused ? "focused" : ""}`}>
             <label htmlFor="pass">Password</label>
             <input type="password" id="pass" value={password}
               onChange={(e) => setPassword(e.target.value)}

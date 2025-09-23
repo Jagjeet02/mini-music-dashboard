@@ -1,0 +1,26 @@
+@use './variable' as *;
+aside {
+    width: 20%;
+    padding-block: 20px;
+    border-right: 1px solid $grey;
+
+    nav {
+        .li {
+            display: block;
+            padding: 15px 20px;
+
+            &.primary-btn {
+                border-radius: 0;
+            }
+
+            &.passive {
+                color: $grey;
+
+                &:hover {
+                    border: 1px solid $light-green;
+                }
+            }
+
+        }
+    }
+}
