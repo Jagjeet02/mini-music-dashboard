@@ -1,8 +1,16 @@
 import { NextResponse } from "next/server";
 import { tracks } from "../../../data/tracks";
 
-export async function GET(req: Request, { params }: { params: { id: string } }) {
-  const track = tracks.find(t => t.id === Number(params.id));
-  if (!track) return NextResponse.json({ error: "Not found" }, { status: 404 });
+export async function GET(
+  req: Request,
+  context: { params: { id: string } }
+) {
+  const { id } = context.params;
+
+  const track = tracks.find((t) => t.id === Number(id));
+  if (!track) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
   return NextResponse.json(track);
 }
