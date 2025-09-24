@@ -1,7 +1,24 @@
+import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-800 shadow p-4 text-center text-gray-600 dark:text-gray-300">
-      © 2025 My Music Dashboard. All rights reserved.
+    <footer className="footer">
+      <div className="footer-container">
+         <div className="footer-right">
+          <div className="footer-logo"><img src="/logo.png" alt="logo" /></div>
+          <p>Bringing you the latest Punjabi hits and tracks dashboard.</p>
+        </div>
+          <div className="footer-links">
+          <Link href="/dashboard">Dashboard</Link>
+          <Link href="/dashboard/track/upload">Upload</Link>
+          <Link href="/dashboard">About</Link>
+          <Link href="/dashboard">Contact</Link>
+        </div>
+       
+      </div>
+
+      <div className="footer-bottom">
+        © 2025 Tune Suno. All rights reserved.
+      </div>
     </footer>
   );
 }

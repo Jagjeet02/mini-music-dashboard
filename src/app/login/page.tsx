@@ -30,7 +30,7 @@ export default function Login() {
         <div className="form-inputs">
           <div className={`input-field ${username || usernameFocused ? "focused" : ""}`}>
             <label htmlFor="user">Username</label>
-            <input type="text"id="user" value={username} 
+            <input type="text" id="user" value={username} 
               onChange={(e) => setUsername(e.target.value)}
               onFocus={() => setUsernameFocused(true)}
               onBlur={() => setUsernameFocused(false)}

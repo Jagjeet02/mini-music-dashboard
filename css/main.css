@@ -1,5 +1,7 @@
 h1 {
   font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -27,7 +29,7 @@ p {
 }
 
 .primary-btn {
-  font-size: 18px;
+  font-size: 16px;
   color: #ffffff;
   background-color: #1ABC9C;
   border: none;
@@ -37,13 +39,150 @@ p {
 }
 
 .secondary-btn {
-  font-size: 18px;
+  font-size: 16px;
   color: #000000;
   background-color: #ffffff;
   border: 1px solid #1ABC9C;
   border-radius: 15px;
   padding: 15px 20px;
   cursor: pointer;
+}
+
+.label {
+  color: #004D57;
+  text-decoration: underline;
+}
+
+.loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dashboard-main .upload-btn {
+  display: none;
+}
+.dashboard-main .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-main .main-header .controls {
+  color: #666666;
+}
+.dashboard-main .main-header .controls .search-input {
+  margin-right: 20px;
+  cursor: unset;
+}
+.dashboard-main .main-header .controls .search-input:focus-visible {
+  outline: 0;
+}
+.dashboard-main .main-header .controls .filter-select:focus-visible {
+  outline: 0;
+}
+.dashboard-main .table-container {
+  overflow-y: auto;
+  max-height: 500px;
+}
+.dashboard-main .table-container .data-table {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+}
+.dashboard-main .table-container .data-table thead {
+  position: sticky;
+  top: 0;
+}
+.dashboard-main .table-container .data-table thead tr th {
+  background-color: #1ABC9C;
+  color: #ffffff;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+}
+.dashboard-main .table-container .data-table tbody tr td {
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  width: 20%;
+}
+.dashboard-main .table-container .data-table tbody tr td.filter-logic {
+  text-align: center;
+}
+.dashboard-main .table-container .data-table tbody tr .view-track {
+  color: #1ABC9C;
+  text-decoration: underline;
+}
+
+.upload-main h1 {
+  text-align: center;
+}
+.upload-main .upload-form {
+  padding: 25px;
+  max-width: 352px;
+  margin: auto;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+}
+.upload-main .upload-form .input-field {
+  border: 1px solid #e5e5e5 !important;
+  border-radius: 15px !important;
+  /* globals.css */
+}
+.upload-main .upload-form .input-field input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+  /* make it subtle */
+  cursor: pointer;
+}
+.upload-main .upload-form button {
+  width: 100%;
+}
+
+.view-main {
+  height: calc(100% - 30px);
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(184, 184, 184, 0.7), 0 0 15px rgba(184, 184, 184, 0.5);
+  padding: 20px;
+}
+.view-main .view-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+  gap: 20px;
+}
+.view-main .view-content .view-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  background-color: #F5F5F5;
+  padding: 20px;
+}
+.view-main .view-content .view-card .icon {
+  font-size: 24px;
+}
+.view-main .view-content .view-card .card-title {
+  font-size: 20px;
+  color: #666666;
+}
+.view-main .view-content .view-card .card-detail {
+  font-size: 24px;
+}
+.view-main .view-content .view-card .status {
+  display: inline-block;
+  padding: 6px 8px;
+  font-size: 24px;
+  border-radius: 15px;
+}
+.view-main .back-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.view-main .back-btn .primary-btn {
+  padding: 15px 30px;
 }
 
 .header-main {
@@ -58,8 +197,8 @@ p {
 
 aside {
   width: 20%;
-  padding-block: 20px;
-  border-right: 1px solid #666666;
+  border-right: 2px solid #e5e5e5;
+  height: calc(100vh - 90px);
 }
 aside nav .li {
   display: block;
@@ -73,6 +212,89 @@ aside nav .li.passive {
 }
 aside nav .li.passive:hover {
   border: 1px solid #1ABC9C;
+}
+
+.footer {
+  background: #004D57;
+  color: #ffffff;
+  padding: 30px;
+  text-align: center;
+}
+.footer .footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  text-align: left;
+}
+.footer .footer-container .footer-right {
+  flex: 1 1 250px;
+}
+.footer .footer-container .footer-right .footer-logo {
+  margin-bottom: 0.5rem;
+  max-width: 200px;
+}
+.footer .footer-container .footer-right .footer-logo img {
+  width: 100%;
+}
+.footer .footer-container .footer-right p {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-top: 0.25rem;
+}
+.footer .footer-container .footer-links {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer .footer-container .footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+.footer .footer-container .footer-links a:hover {
+  text-decoration: underline;
+}
+.footer .footer-container .footer-social {
+  flex: 1 1 150px;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+.footer .footer-container .footer-social a {
+  color: #ffffff;
+  transition: transform 0.2s, color 0.2s;
+}
+.footer .footer-container .footer-social a:hover {
+  transform: scale(1.2);
+}
+.footer .footer-container.dark {
+  background: #1f2937;
+  color: #ddd;
+  border-top: 1px solid #333;
+}
+.footer .footer-container.dark .footer-links a,
+.footer .footer-container.dark .footer-social a {
+  color: #ccc;
+}
+.footer .footer-container.dark .footer-links a:hover,
+.footer .footer-container.dark .footer-social a:hover {
+  color: #60a5fa;
+}
+.footer .footer-container.dark .footer-bottom {
+  color: #aaa;
+}
+.footer .footer-bottom {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #ffffff;
+  border-top: 1px solid #666666;
+  padding-top: 1rem;
 }
 
 * {
@@ -114,16 +336,20 @@ aside nav .li.passive:hover {
   text-align: center;
   margin-bottom: 20px;
 }
-.login-container .login-form .form-inputs {
+.login-container .login-form .login-btn {
+  width: 100%;
+}
+
+.form-inputs {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
-.login-container .login-form .form-inputs .input-field {
+.form-inputs .input-field {
   position: relative;
   margin-bottom: 15px;
 }
-.login-container .login-form .form-inputs .input-field input {
+.form-inputs .input-field input {
   padding: 15px 10px;
   border: none;
   width: 100%;
@@ -131,21 +357,23 @@ aside nav .li.passive:hover {
   border-radius: 15px;
   color: #000000;
 }
-.login-container .login-form .form-inputs .input-field input:focus-visible {
+.form-inputs .input-field input:focus-visible {
   outline: none;
   box-shadow: 0 4px 10px rgba(0, 77, 87, 0.3), 0 0 0 3px rgba(26, 188, 156, 0.2);
 }
-.login-container .login-form .form-inputs .input-field label {
+.form-inputs .input-field label {
   position: absolute;
   top: 11px;
   left: 10px;
   color: #666666;
   transition: 0.35s all;
 }
-.login-container .login-form .form-inputs .input-field.focused label {
+.form-inputs .input-field.focused label {
   top: 0;
   font-size: 12px;
 }
-.login-container .login-form .login-btn {
-  width: 100%;
+
+.main-container {
+  padding: 25px;
+  height: calc(100vh - 90px);
 }/*# sourceMappingURL=main.css.map */

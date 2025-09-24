@@ -1,5 +1,7 @@
 h1{
     font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 h2{
     font-size: 28px;
@@ -26,9 +28,10 @@ $dark-green : #004D57;
 $light-green : #1ABC9C;
 $light-bg: #F5F5F5;
 $grey: #666666;
+$light-grey : #e5e5e5;
 
 .primary-btn {
-    font-size: 18px;
+    font-size: 16px;
     color: $white;
     background-color: $light-green;
     border: none;
@@ -38,11 +41,23 @@ $grey: #666666;
 }
 
 .secondary-btn{
-    font-size: 18px;
+    font-size: 16px;
     color: $black;
     background-color: $white;
     border: 1px solid $light-green;
     border-radius: 15px;
     padding: 15px 20px;
     cursor: pointer;
+}
+
+.label{
+    color: $dark-green;
+    text-decoration: underline;
+}
+
+.loader{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }

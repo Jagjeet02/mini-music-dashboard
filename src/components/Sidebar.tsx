@@ -8,15 +8,16 @@ export default function Sidebar() {
 
   const links = [
     { name: "Dashboard", href: "/dashboard" },
-    { name: "Upload Track", href: "/track/upload" },
+    { name: "Upload Track", href: "/dashboard/track/upload" },
     { name: "Logout", href: "/login" },
   ];
 
   return (
-    <aside className="min-h-screen">
+    <aside className="aside">
       <nav className="space-y-2">
-        {links.map((link) => (
-          <Link
+        {links.map((link) => {
+          return(
+                <Link
             key={link.name}
             href={link.href}
             className={`li ${
@@ -27,7 +28,8 @@ export default function Sidebar() {
           >
             {link.name}
           </Link>
-        ))}
+          )
+})}
       </nav>
     </aside>
   );

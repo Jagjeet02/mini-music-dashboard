@@ -1,8 +1,9 @@
 @use './variable' as *;
 aside {
     width: 20%;
-    padding-block: 20px;
-    border-right: 1px solid $grey;
+    // padding-block: 20px;
+    border-right: 2px solid $light-grey;
+    height: calc(100vh - 90px);
 
     nav {
         .li {

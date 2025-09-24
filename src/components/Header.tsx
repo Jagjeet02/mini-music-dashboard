@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header className="header-main">
-      <img src="./logo.png" alt="logo" className="logo"/>
+      <img src="/logo.png" alt="logo" className="logo"/>
       <button
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         className="primary-btn toggle-btn"
