@@ -55,7 +55,7 @@ export default function TrackDetails({ params }: { params: Promise<{ id: string 
             {track.title}
           </h1>
           <p className="mt-2 text-xl font-medium text-gray-500">
-            A detailed look at the track's information.
+            A detailed look at the track&apos;s information.
           </p>
         </div>
 
