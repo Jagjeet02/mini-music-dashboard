@@ -1,14 +1,15 @@
 import { NextResponse } from "next/server";
 import { tracks } from "../../../data/tracks";
 
-// No extra interface — use the inline type exactly as Next.js expects
-export async function GET(
-  request: Request,
-  context: { params: { id: string } } // this exact type works
-) {
-  const { id } = context.params;
+export async function GET(request: Request, context: any) {
+  // Get the id from the URL
+  const id = context?.params?.id;
 
-  const track = tracks.find((t) => t.id === Number(id));
+  if (!id) {
+    return NextResponse.json({ error: "Missing ID" }, { status: 400 });
+  }
+
+  const track = tracks.find(t => t.id === Number(id));
 
   if (!track) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
