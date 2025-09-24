@@ -187,7 +187,7 @@ p {
 }
 
 .view-main {
-  height: calc(100% - 30px);
+  height: 100%;
   width: 100%;
   background-color: #ffffff;
   border-radius: 15px;
@@ -212,16 +212,16 @@ p {
   font-size: 24px;
 }
 .view-main .view-content .view-card .card-title {
-  font-size: 20px;
+  font-size: 18px;
   color: #666666;
 }
 .view-main .view-content .view-card .card-detail {
-  font-size: 24px;
+  font-size: 20px;
 }
 .view-main .view-content .view-card .status {
   display: inline-block;
   padding: 6px 8px;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 15px;
 }
 .view-main .back-btn {

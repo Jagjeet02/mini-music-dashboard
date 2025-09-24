@@ -47,7 +47,7 @@ export default function TrackDetails({ params }: { params: Promise<{ id: string 
   };
 
   return (
-    <div className="main-container">
+    // <div className="main-container">
       <div className="view-main">
         {/* Title Section */}
         <div className="text-center mb-10">
@@ -107,6 +107,6 @@ export default function TrackDetails({ params }: { params: Promise<{ id: string 
           </Link>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
