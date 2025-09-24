@@ -60,6 +60,35 @@ p {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .primary-btn {
+    padding: 10px 12px;
+  }
+  .secondary-btn {
+    padding: 10px 12px;
+  }
+}
 .dashboard-main .upload-btn {
   display: none;
 }
@@ -68,22 +97,41 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  .dashboard-main .main-header {
+    flex-wrap: wrap;
+  }
+}
 .dashboard-main .main-header .controls {
   color: #666666;
 }
+@media screen and (max-width: 576px) {
+  .dashboard-main .main-header .controls {
+    margin-bottom: 20px;
+  }
+}
 .dashboard-main .main-header .controls .search-input {
-  margin-right: 20px;
+  margin: 0 20px 20px 0;
+  font-size: 16px;
   cursor: unset;
 }
 .dashboard-main .main-header .controls .search-input:focus-visible {
   outline: 0;
 }
+.dashboard-main .main-header .controls .filter-select {
+  font-size: 16px;
+}
 .dashboard-main .main-header .controls .filter-select:focus-visible {
   outline: 0;
 }
 .dashboard-main .table-container {
-  overflow-y: auto;
-  max-height: 500px;
+  overflow: auto;
+  max-height: calc(100vh - 225px);
+}
+@media screen and (max-width: 1200px) {
+  .dashboard-main .table-container {
+    max-height: calc(100vh - 305px);
+  }
 }
 .dashboard-main .table-container .data-table {
   width: 100%;
@@ -213,12 +261,36 @@ aside nav .li.passive {
 aside nav .li.passive:hover {
   border: 1px solid #1ABC9C;
 }
+@media screen and (max-width: 768px) {
+  aside {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 2px solid #e5e5e5;
+  }
+  aside nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  aside nav .li {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
 
 .footer {
   background: #004D57;
   color: #ffffff;
   padding: 30px;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
 }
 .footer .footer-container {
   max-width: 1440px;
@@ -376,4 +448,14 @@ aside nav .li.passive:hover {
 .main-container {
   padding: 25px;
   height: calc(100vh - 90px);
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    width: 100%;
+    padding: 20px;
+  }
+  .main-page {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */

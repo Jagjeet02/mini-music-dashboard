@@ -1,24 +1,30 @@
-h1{
+h1 {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 20px;
 }
-h2{
+
+h2 {
     font-size: 28px;
 }
-h3{
+
+h3 {
     font-size: 24px;
 }
-h4{
+
+h4 {
     font-size: 22px;
 }
-h5{
+
+h5 {
     font-size: 20px;
 }
-h6{
+
+h6 {
     font-size: 18px;
 }
-p{
+
+p {
     font-size: 16px;
 }
 
@@ -40,7 +46,7 @@ $light-grey : #e5e5e5;
     cursor: pointer;
 }
 
-.secondary-btn{
+.secondary-btn {
     font-size: 16px;
     color: $black;
     background-color: $white;
@@ -50,14 +56,53 @@ $light-grey : #e5e5e5;
     cursor: pointer;
 }
 
-.label{
+.label {
     color: $dark-green;
     text-decoration: underline;
 }
 
-.loader{
+.loader {
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .primary-btn {
+        padding: 10px 12px;
+    }
+
+    .secondary-btn {
+        padding: 10px 12px;
+    }
 }

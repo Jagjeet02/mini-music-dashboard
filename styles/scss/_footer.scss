@@ -5,6 +5,9 @@
     color: $white;
     padding: 30px;
     text-align: center;
+            @media screen and (max-width:768px) {
+            padding: 20px;
+        }
 
     .footer-container {
         max-width: 1440px;

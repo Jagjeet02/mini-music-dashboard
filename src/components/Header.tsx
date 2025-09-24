@@ -16,12 +16,12 @@ export default function Header() {
   return (
     <header className="header-main">
       <img src="/logo.png" alt="logo" className="logo"/>
-      <button
+      {/* <button
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         className="primary-btn toggle-btn"
       >
         {theme === "light" ? "Dark Mode" : "Light Mode"}
-      </button>
+      </button> */}
     </header>
   );
 }

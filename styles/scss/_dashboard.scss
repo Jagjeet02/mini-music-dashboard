@@ -7,16 +7,26 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
         .controls{
             color: $grey;
+            @media screen and (max-width:576px) {
+                margin-bottom:20px;
+            }
+            
             .search-input{
-                margin-right: 20px;
+                margin: 0 20px 20px 0;
+                font-size: 16px;
                 cursor: unset;
+                
                 &:focus-visible{
                     outline: 0;
                 }
             }
             .filter-select {
+                font-size: 16px;
                 &:focus-visible{
                     outline: 0;
                 }
@@ -25,8 +35,11 @@
     }
 
     .table-container {
-        overflow-y: auto;
-        max-height: 500px;
+        overflow: auto;
+        max-height: calc(100vh - 225px);
+        @media screen and (max-width: 1200px) {
+           max-height: calc(100vh - 305px);
+        }
 
         .data-table {
             width: 100%;

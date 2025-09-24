@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { tracks, Track } from "../../data/tracks"; // ✅ relative path
+import { tracks, Track } from "../../data/tracks"; 
 
 export async function GET() {
   return NextResponse.json(tracks);

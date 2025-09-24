@@ -24,4 +24,23 @@ aside {
 
         }
     }
+     @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 2px solid $light-grey;
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .li {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
+  }
 }
