@@ -1,13 +1,17 @@
 import { NextResponse } from "next/server";
 import { tracks } from "../../../data/tracks";
 
-// 'params' is directly typed, not wrapped inside another object
-export async function GET(req: Request, context: any) {
-  const { id } = context.params;
+interface Params {
+  params: { id: string };
+}
+
+export async function GET(req: Request, { params }: Params) {
+  const { id } = params;
 
   const track = tracks.find((t) => t.id === Number(id));
-
-  if (!track) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  if (!track) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
 
   return NextResponse.json(track);
 }
