@@ -213,7 +213,8 @@ p {
 }
 .view-main .view-content .view-card .card-title {
   font-size: 18px;
-  color: #666666;
+  color: #000000;
+  font-weight: 600;
 }
 .view-main .view-content .view-card .card-detail {
   font-size: 20px;
