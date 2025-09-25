@@ -218,6 +218,7 @@ p {
 }
 .view-main .view-content .view-card .card-detail {
   font-size: 20px;
+  color: #000000;
 }
 .view-main .view-content .view-card .status {
   display: inline-block;
@@ -455,6 +456,7 @@ aside nav .li.passive:hover {
   .main-container {
     width: 100%;
     padding: 20px;
+    background-color: #ffffff;
   }
   .main-page {
     flex-direction: column;

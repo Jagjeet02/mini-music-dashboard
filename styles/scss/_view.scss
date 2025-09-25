@@ -7,7 +7,7 @@
     border-radius: 15px;
     box-shadow: 0 0 8px rgba(184, 184, 184, 0.7), 0 0 15px rgba(184, 184, 184, 0.5);
     padding: 20px;
-
+    
     .view-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -34,6 +34,7 @@
 
             .card-detail {
                 font-size: 20px;
+                color: #000000;
                 
             }
 
